@@ -64,7 +64,22 @@ function myAdd() {
     let myKorteliuSum = document.getElementById("myKorteles").childElementCount;
     console.log("Korteliu suma: "+myKorteliuSum)
     var element = document.createElement("div");
-    element.className = "kortele_g";
+    switch(document.getElementById("myKortSpalv").value) {
+      case g:
+        element.className = "kortele_g";
+        break;
+      case z:
+        element.className = "kortele_z";
+        break;
+      case m:
+        element.className = "kortele_m";
+        break; 
+      case r:
+        element.className = "kortele_r";
+        break;   
+      default:
+        element.className = "kortele_g";
+    }
     var myNaujaKortNum = myKorteliuSum+1;
     element.id = 'k'+myNaujaKortNum;
     console.log("Nuajos korteles id: "+element.id)
