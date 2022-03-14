@@ -126,15 +126,14 @@ input {
   }
   
   /* The Close Button */
-  .close {
+  .closeAdd .closeEdit {
     color: black;
     float: right;
     font-size: 28px;
     font-weight: bold;
   }
   
-  .close:hover,
-  .close:focus {
+  .closeAdd:hover,.closeAdd:focus, .closeEdit:hover,.closeEdit:focus  {
     color: red;
     text-decoration: none;
     cursor: pointer;

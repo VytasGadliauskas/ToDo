@@ -1,3 +1,5 @@
+
+//////////////////////////  Testines funkcijos
 (function(){
     
     function onChange(event) {
@@ -22,31 +24,39 @@
 
 
 /////////////////////////////////////////////////   Modal ADD kodas
-// Get the modal
+
 var modalAdd = document.getElementById("myModalAdd");
-
-// Get the button that opens the modal
 var btnAdd = document.getElementById("myBtnAdd");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
+var spanAdd = document.getElementsByClassName("closeAdd")[0];
 btnAdd.onclick = function() {
   modalAdd.style.display = "block";
 }
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+spanAdd.onclick = function() {
   modalAdd.style.display = "none";
 }
-
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modalAdd) {
     modalAdd.style.display = "none";
   }
 }
+
+//////////////////////////////////////////////// Edit korteles kodas
+
+var modalEdit = document.getElementById("myModalEdit");
+var btnEdit = document.getElementById("myBtnEdit");
+var spanEdit = document.getElementsByClassName("closeEdit")[0];
+btnEdit.onclick = function() {
+  modalEdit.style.display = "block";
+}
+spanEdit.onclick = function() {
+  modalEdit.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modalEdit) {
+    modalEdit.style.display = "none";
+  }
+}
+
 
 ///////////////////////////////////////////////  Delete kortele kodas
 
@@ -101,3 +111,15 @@ function myAdd() {
     document.getElementById('myKorteles').appendChild(element);
     modalAdd.style.display = "none";
 }
+
+//////////////////////////////////////////////// Edit Save  korteles kodas
+
+
+
+
+//////////////////////////////////////////////// Export JSON kodas
+
+
+
+
+//////////////////////////////////////////////// Import JSON kodas

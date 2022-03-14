@@ -22,6 +22,7 @@
     <div class="menu">
         <button id="myBtnAdd"> + Prideti kortele</button>    
         Importuoti ToDo sarasa: <input id="file" type="file"/>
+        <button id="myBtnJsonExport">Eksportuoti JSON failu</button> 
     </div>
     <div class="korteles" id="myKorteles">
         <div class="kortele_g" id="k1"> 
@@ -55,13 +56,10 @@
 </div>
 
 
-<!------------------------------------------ Modal langai -->
-
-<!-- The Modal Add-->
+<!------------------------------------------ Modal langas Add -->
 <div id="myModalAdd" class="modal">
-    <!-- Modal content -->
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span class="closeAdd">&times;</span>
       <p>Korteles duomenys</p>
       <label for="kortPavadinimas">Pavadinimas</label>
       <input type="text" id="kortPavadinimas" value="Pavadinimas"><br>
@@ -78,8 +76,31 @@
       </div>
       <button onclick="myAdd()">Prideti</button>
     </div>
-  
   </div>
+
+<!------------------------------------------ Modal langas Edit -->
+<div id="myModalEdit" class="modal">
+    <div class="modal-content">
+      <span class="closeEdit">&times;</span>
+      <p>Korteles duomenys</p>
+      <label for="kortPavadinimas">Pavadinimas</label>
+      <input type="text" id="kortPavadinimasEdit" value=""><br>
+      <label for="kortAprasymas">Aprasymas</label>
+      <textarea name="kortAprasymas" id="kortAprasymasEdit" cols="30" rows="10" ></textarea>
+      <div>
+        <label for="color">Korteles spalva:</label>
+        <select name="color" id="myKortSpalvEdit">
+          <option value="g" style="color:yellow" selected>#######</option>
+          <option value="z" style="color:green">#######</option>
+          <option value="m" style="color:blue">#######</option>
+          <option value="r" style="color:red">#######</option>
+        </select>
+      </div>
+      <button onclick="myEdit()">Prideti</button>
+    </div>
+  </div>
+
+
 
     
 <script src="todo.js"></script>
