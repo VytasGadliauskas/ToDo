@@ -75,7 +75,14 @@ function myAdd() {
     btnDel.innerHTML = "-";
     element.appendChild(btnEdit);
     element.appendChild(btnDel);
-    element.appendChild(document.createTextNode('Nauja testas'));
+    var kortH3 = document.createElement("h3");
+    kortH3.innerHTML = document.getElementById("kortPavadinimas").value;
+    console.log('Naujos korteles pavadinimas: '+document.getElementById("kortPavadinimas").value);
+    var kortP = document.createElement("p");
+    console.log('Naujos korteles aprasymas: '+document.getElementById("kortAprasymas").value);
+    kortP.innerHTML = document.getElementById("kortAprasymas").value;
+    element.appendChild(kortH3);
+    element.appendChild(kortP);
     document.getElementById('myKorteles').appendChild(element);
     modalAdd.style.display = "none";
 }
