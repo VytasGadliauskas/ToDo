@@ -1,8 +1,4 @@
 
-//////////////////////////  Testines funkcijos
-
-
-
 /////////////////////////////////////////////////   Modal ADD kodas
 
 var modalAdd = document.getElementById("myModalAdd");
@@ -93,11 +89,11 @@ function myAdd() {
     element.id = 'k'+myNaujaKortNum;
     console.log("Naujos korteles id: "+element.id)
     let btnEdit = document.createElement("button");
-    btnEdit.innerHTML = "Ed";
+    btnEdit.innerHTML = "<img src='edit.png' alt='' width='20'>";
     btnEdit.setAttribute('onclick', 'myEdit("'+element.id+'")')
     let btnDel = document.createElement("button");
     btnDel.setAttribute('onclick', 'myKorteleDelete("'+element.id+'")')
-    btnDel.innerHTML = "-";
+    btnDel.innerHTML = "<img src='delete.png' alt='' width='20'>";
     element.appendChild(btnEdit);
     element.appendChild(btnDel);
     var kortH3 = document.createElement("h3");
@@ -113,9 +109,6 @@ function myAdd() {
     document.getElementById('myKorteles').appendChild(element);
     modalAdd.style.display = "none";
 }
-
-
-
 
 
 //////////////////////////////////////////////// Export JSON kodas
