@@ -57,3 +57,12 @@ function myKorteleDelete(myKortID) {
             myobj.remove();
         }    
   }
+
+///////////////////////////////////////////////  Prideti kortele kodas
+
+function myAdd() {
+    var element = document.createElement("div");
+    element.className = "kortele_g";
+    element.appendChild(document.createTextNode('Nauja testas'));
+    document.getElementById('myKorteles').appendChild(element);
+}
