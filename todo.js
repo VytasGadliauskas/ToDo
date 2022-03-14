@@ -61,12 +61,17 @@ function myKorteleDelete(myKortID) {
 ///////////////////////////////////////////////  Prideti kortele kodas
 
 function myAdd() {
+    let myKorteliuSum = document.getElementById("myKorteles").childElementCount;
+    console.log("Korteliu suma: "+myKorteliuSum)
     var element = document.createElement("div");
     element.className = "kortele_g";
-   // element.id =
+    var myNaujaKortNum = myKorteliuSum+1;
+    element.id = 'k'+myNaujaKortNum;
+    console.log("Nuajos korteles id: "+element.id)
     let btnEdit = document.createElement("button");
     btnEdit.innerHTML = "Ed";
     let btnDel = document.createElement("button");
+    btnDel.setAttribute('onclick', 'myKorteleDelete("'+element.id+'")')
     btnDel.innerHTML = "-";
     element.appendChild(btnEdit);
     element.appendChild(btnDel);
