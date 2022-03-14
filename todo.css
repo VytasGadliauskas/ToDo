@@ -1,16 +1,28 @@
 
 .virsus {
-    border: solid 2px;
+   /* border: solid 2px; */
     background-color: rgb(177, 177, 177);
     border-radius: 5px;
     width: 100%;
-    height: auto;
-    text-align: center;
+    display: flex;
+   /* flex-wrap: wrap; */
+    align-items: center;
+    justify-items: center;
+}
+
+.virsus1 {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.virsus2 {
+    width: 100%;
+    text-align: center;  
 }
 
 .menu {
     margin-top: 10px;
-    border: solid 2px;
+   /* border: solid 2px; */
     background-color: white;
     border-radius: 5px;
     width: 98%;
@@ -23,21 +35,21 @@
 
 .apacia {
     margin-top: 10px;
-    border: solid 2px;
+  /*  border: solid 2px; */
     background-color: rgb(177, 177, 177);
     border-radius: 5px;
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     padding-bottom: 10px;
-   
+    align-items: center;
+    justify-content: center;    
 }
 
 .korteles {
     margin-top: 10px;
-    border: solid 2px;
+  /*  border: solid 2px; */
     background-color: white;
     border-radius: 5px;
     width: 98%;
@@ -51,7 +63,6 @@
 }
 
 .kortele_g {
-    border: solid 1px;
     background-color: yellow;
     border-radius: 5px;
     width: 180px;
@@ -61,7 +72,6 @@
 }
 
 .kortele_r {
-    border: solid 1px;
     background-color: red;
     border-radius: 5px;
     width: 180px;
@@ -71,7 +81,6 @@
 }
 
 .kortele_m {
-    border: solid 1px;
     background-color: blue;
     border-radius: 5px;
     width: 180px;
@@ -81,7 +90,6 @@
 }
 
 .kortele_z {
-    border: solid 1px;
     background-color: green;
     border-radius: 5px;
     width: 180px;

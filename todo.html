@@ -11,9 +11,8 @@
 <body>
 
 <div class="virsus">
-    <h1>Paprastas ToDo</h1>
-    <p> JS ToDo, demo todo failas: todo.json </p>
-    
+    <div class="virsus1"> <img src="todo.jpeg" alt="Logo" width="100" height="100"> </div>
+    <div class="virsus2"> <h1>ToDo Demo</h1> </div>
 </div>
 
 
@@ -26,28 +25,28 @@
     </div>
     <div class="korteles" id="myKorteles">
         <div class="kortele_g" id="k1"> 
-            <button id="myBtnEdit">Ed</button> 
+            <button id="myBtnEdit-k1" onclick="myEdit('k1')">Ed</button> 
             <button id="myBtnEdit" onclick="myKorteleDelete('k1')">-</button><br>
-            <h3>Demo</h3> 
-            <p>tralia tralia</p>
+            <h3 id="myEditH3-k1">Demo</h3> 
+            <p id="myEditP-k1">tralia tralia</p>
         </div>
         <div class="kortele_z" id="k2"> 
-            <button id="myBtnEdit">Ed</button> 
+            <button id="myBtnEdit-k2" onclick="myEdit('k2')">Ed</button> 
             <button id="myBtnEdit" onclick="myKorteleDelete('k2')">-</button><br>
-            <h3>Demo</h3> 
-            <p>tralia tralia</p>
+            <h3 id="myEditH3-k2">Demo</h3> 
+            <p id="myEditP-k2">tralia tralia</p>
         </div>    
         <div class="kortele_m" id="k3"> 
-            <button id="myBtnEdit">Ed</button> 
+            <button id="myBtnEdit-k3" onclick="myEdit('k3')">Ed</button> 
             <button id="myBtnEdit" onclick="myKorteleDelete('k3')">-</button><br>
-            <h3>Demo</h3> 
-            <p>tralia tralia</p>
+            <h3 id="myEditH3-k3">Demo</h3> 
+            <p id="myEditP-k3">tralia tralia</p>
         </div>
         <div class="kortele_r" id="k4"> 
-            <button id="myBtnEdit">Ed</button> 
+            <button id="myBtnEdit-k4" onclick="myEdit('k4')">Ed</button> 
             <button id="myBtnEdit" onclick="myKorteleDelete('k4')">-</button><br>
-            <h3>Demo</h3> 
-            <p>tralia tralia</p>
+            <h3 id="myEditH3-k4">Demo</h3> 
+            <p id="myEditP-k4">tralia tralia</p>
         </div>
         
 
@@ -71,7 +70,7 @@
           <option value="g" style="color:yellow" selected>#######</option>
           <option value="z" style="color:green">#######</option>
           <option value="m" style="color:blue">#######</option>
-          <option value="r" style="color:red">######</option>
+          <option value="r" style="color:red">#######</option>
         </select>
       </div>
       <button onclick="myAdd()">Prideti</button>
@@ -83,7 +82,7 @@
     <div class="modal-content">
       <span class="closeEdit">&times;</span>
       <p>Korteles duomenys</p>
-      <label for="kortPavadinimas">Pavadinimas</label>
+      <label for="kortPavadinimasEdit">Pavadinimas</label>
       <input type="text" id="kortPavadinimasEdit" value=""><br>
       <label for="kortAprasymas">Aprasymas</label>
       <textarea name="kortAprasymas" id="kortAprasymasEdit" cols="30" rows="10" ></textarea>
@@ -96,11 +95,9 @@
           <option value="r" style="color:red">#######</option>
         </select>
       </div>
-      <button onclick="myEdit()">Prideti</button>
+      <button onclick="myEditKeisti()">Keisti</button>
     </div>
   </div>
-
-
 
     
 <script src="todo.js"></script>

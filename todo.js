@@ -40,23 +40,30 @@ window.onclick = function(event) {
   }
 }
 
-//////////////////////////////////////////////// Edit korteles kodas
+//////////////////////////////////////////////// modal Edit kodas
 
-var modalEdit = document.getElementById("myModalEdit");
-var btnEdit = document.getElementById("myBtnEdit");
-var spanEdit = document.getElementsByClassName("closeEdit")[0];
-btnEdit.onclick = function() {
-  modalEdit.style.display = "block";
-}
-spanEdit.onclick = function() {
-  modalEdit.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modalEdit) {
-    modalEdit.style.display = "none";
-  }
-}
+function myEdit(EditID) {
+    let myID = EditID.slice(1);
+    // console.log('Edit ID: ', myID,' ',EditID );
+    var modalEdit = document.getElementById("myModalEdit");
+    console.log("'myBtnEdit-k"+myID+"'"); 
+    var btnEdit = document.getElementById("'myBtnEdit-k"+myID+"'");
+    var spanEdit = document.getElementsByClassName("closeEdit")[0];
+    modalEdit.style.display = "block";
+    
+    
 
+    spanEdit.onclick = function() {
+        modalEdit.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modalEdit) {
+          modalEdit.style.display = "none";
+          }
+    }
+    return myID; 
+}
 
 ///////////////////////////////////////////////  Delete kortele kodas
 
@@ -66,7 +73,7 @@ function myKorteleDelete(myKortID) {
             const myobj = document.getElementById(myKortID);
             myobj.remove();
         }    
-  }
+ }
 
 ///////////////////////////////////////////////  Prideti kortele kodas
 
@@ -92,18 +99,21 @@ function myAdd() {
     }
     var myNaujaKortNum = myKorteliuSum+1;
     element.id = 'k'+myNaujaKortNum;
-    console.log("Nuajos korteles id: "+element.id)
+    console.log("Naujos korteles id: "+element.id)
     let btnEdit = document.createElement("button");
     btnEdit.innerHTML = "Ed";
+    btnEdit.setAttribute('onclick', 'myEdit("'+element.id+'")')
     let btnDel = document.createElement("button");
     btnDel.setAttribute('onclick', 'myKorteleDelete("'+element.id+'")')
     btnDel.innerHTML = "-";
     element.appendChild(btnEdit);
     element.appendChild(btnDel);
     var kortH3 = document.createElement("h3");
+    kortH3.id = 'myEditH3-k'+myNaujaKortNum;
     kortH3.innerHTML = document.getElementById("kortPavadinimas").value;
     console.log('Naujos korteles pavadinimas: '+document.getElementById("kortPavadinimas").value);
     var kortP = document.createElement("p");
+    kortP.id = 'myEditP-k'+myNaujaKortNum;
     console.log('Naujos korteles aprasymas: '+document.getElementById("kortAprasymas").value);
     kortP.innerHTML = document.getElementById("kortAprasymas").value;
     element.appendChild(kortH3);
@@ -114,6 +124,9 @@ function myAdd() {
 
 //////////////////////////////////////////////// Edit Save  korteles kodas
 
+function myEditKeisti () {
+  //
+}
 
 
 
@@ -122,4 +135,4 @@ function myAdd() {
 
 
 
-//////////////////////////////////////////////// Import JSON kodas
+//////////////////////////////////////////////// Import JSON kodas ///
