@@ -1,20 +1,23 @@
 
 /////////////////////////////////////////////////   Modal ADD kodas
 
-var modalAdd = document.getElementById("myModalAdd");
-var btnAdd = document.getElementById("myBtnAdd");
-var spanAdd = document.getElementsByClassName("closeAdd")[0];
-btnAdd.onclick = function() {
-  modalAdd.style.display = "block";
-}
-spanAdd.onclick = function() {
-  modalAdd.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modalAdd) {
-    modalAdd.style.display = "none";
-  }
-}
+    var modalAdd = document.getElementById("myModalAdd");
+    var btnAdd = document.getElementById("myBtnAdd");
+    var spanAdd = document.getElementsByClassName("closeAdd")[0];
+
+    btnAdd.onclick = function() {
+      modalAdd.style.display = "block";
+    }
+
+    spanAdd.onclick = function() {
+      modalAdd.style.display = "none";
+    }
+
+    //window.onclick = function(event) {
+    //  if (event.target == modalAdd) {
+    //    modalAdd.style.display = "none";
+    //  }
+    //}
 
 //////////////////////////////////////////////// modal Edit kodas
 
@@ -38,11 +41,11 @@ function myEdit(EditID) {
         modalEdit.style.display = "none";
     }
 
-    window.onclick = function(event) {
-        if (event.target == modalEdit) {
-          modalEdit.style.display = "none";
-        }
-    }
+   // window.onclick = function(event) {
+   //     if (event.target == modalEdit) {
+   //       modalEdit.style.display = "none";
+   //     }
+   // }
 
     //////////////////////////////////////////////// Edit Save korteles kodas
     var buttonSave = document.getElementById('btnEditSave');
