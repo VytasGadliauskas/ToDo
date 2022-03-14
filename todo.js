@@ -1,26 +1,6 @@
 
 //////////////////////////  Testines funkcijos
-(function(){
-    
-    function onChange(event) {
-        var reader = new FileReader();
-        reader.onload = onReaderLoad;
-        reader.readAsText(event.target.files[0]);
-    }
 
-    function onReaderLoad(event){
-       // console.log(event.target.result);
-        var obj = JSON.parse(event.target.result);
-        alert_data(obj.name, obj.family);
-    }
-    
-    function alert_data(name, family){
-        console.log('Nameas : ' + name + ', Familys : ' + family);
-    }
- 
-    document.getElementById('file').addEventListener('change', onChange);
-
-}());
 
 
 /////////////////////////////////////////////////   Modal ADD kodas
@@ -46,12 +26,17 @@ function myEdit(EditID) {
     let myID = EditID.slice(1);
     // console.log('Edit ID: ', myID,' ',EditID );
     var modalEdit = document.getElementById("myModalEdit");
-    console.log("'myBtnEdit-k"+myID+"'"); 
+    // console.log("'myBtnEdit-k"+myID+"'"); 
     var btnEdit = document.getElementById("'myBtnEdit-k"+myID+"'");
     var spanEdit = document.getElementsByClassName("closeEdit")[0];
     modalEdit.style.display = "block";
-    
-    
+    var myH3ID="myEditH3-k"+myID;
+    var myPID="myEditP-k"+myID;
+    // var myCID =    <--- spalvos korteles nekeiciu, nedadaryta
+    // console.log("Korteles id: 'myEditH3-k"+myID+"'");
+    document.getElementById("kortPavadinimasEdit").value = document.getElementById(myH3ID).innerText;
+    document.getElementById("kortAprasymasEdit").value = document.getElementById(myPID).innerText;
+    // document.getElementById("myKortSpalvEdit").value =  
 
     spanEdit.onclick = function() {
         modalEdit.style.display = "none";
@@ -60,9 +45,16 @@ function myEdit(EditID) {
     window.onclick = function(event) {
         if (event.target == modalEdit) {
           modalEdit.style.display = "none";
-          }
+        }
     }
-    return myID; 
+
+    //////////////////////////////////////////////// Edit Save korteles kodas
+    var buttonSave = document.getElementById('btnEditSave');
+    buttonSave.onclick = function() {
+       document.getElementById(myH3ID).innerText = document.getElementById("kortPavadinimasEdit").value;
+       document.getElementById(myPID).innerText = document.getElementById("kortAprasymasEdit").value;
+       modalEdit.style.display = "none";
+    }
 }
 
 ///////////////////////////////////////////////  Delete kortele kodas
@@ -122,11 +114,7 @@ function myAdd() {
     modalAdd.style.display = "none";
 }
 
-//////////////////////////////////////////////// Edit Save  korteles kodas
 
-function myEditKeisti () {
-  //
-}
 
 
 
