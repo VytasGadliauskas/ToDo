@@ -68,14 +68,13 @@
       <label for="kortAprasymas">Aprasymas</label>
       <textarea name="kortAprasymas" id="kortAprasymas" cols="30" rows="10" >Naujos korteles aprasymas</textarea>
       <div>
-            <input type="radio" id="kortSpalRed" value="slap1">
-            <label for="kortSpalRed" style="color:red">Raudona</label>
-            <input type="radio" id="kortSpalZal" value="slap2">
-            <label for="kortSpalZal" style="color:green">Zalia</label>  
-            <input type="radio" id="kortSpalGel" value="slap3">
-            <label for="kortSpalGel" style="color:yellow">Geltona</label>
-            <input type="radio" id="kortSpalMel" value="spal4">
-            <label for="kortSpalMel" style="color:blue">Melyna</label>
+        <label for="color">Korteles spalva:</label>
+        <select name="color" id="myKortSpalv">
+          <option value="yellow" style="color:yellow" selected>#######</option>
+          <option value="green" style="color:green">#######</option>
+          <option value="blue" style="color:blue">#######</option>
+          <option value="red" style="color:red">#####@#</option>
+        </select>
       </div>
       <button onclick="myAdd()">Prideti</button>
     </div>
