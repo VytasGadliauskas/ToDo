@@ -65,16 +65,16 @@ function myAdd() {
     console.log("Korteliu suma: "+myKorteliuSum)
     var element = document.createElement("div");
     switch(document.getElementById("myKortSpalv").value) {
-      case g:
+      case "g":
         element.className = "kortele_g";
         break;
-      case z:
+      case "z":
         element.className = "kortele_z";
         break;
-      case m:
+      case "m":
         element.className = "kortele_m";
         break; 
-      case r:
+      case "r":
         element.className = "kortele_r";
         break;   
       default:
