@@ -65,4 +65,5 @@ function myAdd() {
     element.className = "kortele_g";
     element.appendChild(document.createTextNode('Nauja testas'));
     document.getElementById('myKorteles').appendChild(element);
+    modalAdd.style.display = "none";
 }
