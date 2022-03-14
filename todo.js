@@ -63,6 +63,13 @@ function myKorteleDelete(myKortID) {
 function myAdd() {
     var element = document.createElement("div");
     element.className = "kortele_g";
+   // element.id =
+    let btnEdit = document.createElement("button");
+    btnEdit.innerHTML = "Ed";
+    let btnDel = document.createElement("button");
+    btnDel.innerHTML = "-";
+    element.appendChild(btnEdit);
+    element.appendChild(btnDel);
     element.appendChild(document.createTextNode('Nauja testas'));
     document.getElementById('myKorteles').appendChild(element);
     modalAdd.style.display = "none";
