@@ -32,7 +32,7 @@ var btnAdd = document.getElementById("myBtnAdd");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-btn.onclick = function() {
+btnAdd.onclick = function() {
   modalAdd.style.display = "block";
 }
 
