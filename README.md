@@ -1,4 +1,4 @@
 # ToDo
 JS todo listas (dar kuriamas pasiliko js)
 
-https://vytasgadliauskas.github.io/ToDo/
+https://vytasgadliauskas.github.io/ToDo/todo.html
