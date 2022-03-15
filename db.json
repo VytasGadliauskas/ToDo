@@ -1,0 +1,33 @@
+{
+
+    "k1":{
+        "spalva": "g",
+        "pavadinimas": "Pavadinimas",
+        "aprasymas": "Aprasymas",
+        "statusas": true
+    },
+            
+    "k2":{
+        "spalva": "g",
+        "pavadinimas": "Pavadinimas",
+        "aprasymas": "Aprasymas",
+        "statusas": true
+    },
+    
+    "k3":{
+        "spalva": "z",
+        "pavadinimas": "Pavadinimas",
+        "aprasymas": "Aprasymas",
+        "statusas": true
+    },
+
+    "k4":{
+        "spalva": "m",
+        "pavadinimas": "Pavadinimas",
+        "aprasymas": "Aprasymas",
+        "statusas": true
+    }
+
+}
+
+
