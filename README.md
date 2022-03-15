@@ -7,9 +7,10 @@ Didžiausias dėmesys bus atkreipiamas į išvaizdą ir UI (kaip patogu naudotis
 
 JS todo listas [html,css,js]
 
-DB // https://my-json-server.typicode.com/VytasGadliauskas/ToDo
-
 https://vytasgadliauskas.github.io/ToDo/todo.html
+
+
+
 
 
 
