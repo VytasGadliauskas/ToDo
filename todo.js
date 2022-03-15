@@ -31,12 +31,28 @@ function myEdit(EditID) {
     modalEdit.style.display = "block";
     var myH3ID="myEditH3-k"+myID;
     var myPID="myEditP-k"+myID;
-    // var myCID =    <--- spalvos korteles nekeiciu, nedadaryta
-    // console.log("Korteles id: 'myEditH3-k"+myID+"'");
+    var myCID = document.getElementById(EditID).className; 
+    console.log("Korteles id: ",myCID);
     document.getElementById("kortPavadinimasEdit").value = document.getElementById(myH3ID).innerText;
     document.getElementById("kortAprasymasEdit").value = document.getElementById(myPID).innerText;
-    // document.getElementById("myKortSpalvEdit").value =  
-
+    switch (myCID){
+        case "kortele_g":
+            document.getElementById("myKortSpalvEdit").value = "g";
+            break;
+        case "kortele_z":
+            document.getElementById("myKortSpalvEdit").value = "z";
+            break;
+        case "kortele_m":
+            document.getElementById("myKortSpalvEdit").value = "m";
+            break;
+        case "kortele_r":
+            document.getElementById("myKortSpalvEdit").value = "r";
+            break;    
+        default:    
+            document.getElementById("myKortSpalvEdit").value = "g";
+    }
+    
+    
     spanEdit.onclick = function() {
         modalEdit.style.display = "none";
     }
@@ -50,9 +66,27 @@ function myEdit(EditID) {
     //////////////////////////////////////////////// Edit Save korteles kodas
     var buttonSave = document.getElementById('btnEditSave');
     buttonSave.onclick = function() {
-       document.getElementById(myH3ID).innerText = document.getElementById("kortPavadinimasEdit").value;
-       document.getElementById(myPID).innerText = document.getElementById("kortAprasymasEdit").value;
-       modalEdit.style.display = "none";
+        document.getElementById(myH3ID).innerText = document.getElementById("kortPavadinimasEdit").value;
+        document.getElementById(myPID).innerText = document.getElementById("kortAprasymasEdit").value;
+       // console.log('Edit ID: ',EditID );
+        switch (document.getElementById("myKortSpalvEdit").value){
+          case "g":
+              document.getElementById(EditID).className = "kortele_g";
+              break;
+          case "z":
+              document.getElementById(EditID).className = "kortele_z";
+              break;
+          case "m":
+              document.getElementById(EditID).className = "kortele_m";
+              break;
+          case "r":
+              document.getElementById(EditID).className = "kortele_r";
+              break;    
+          default:    
+              document.getElementById(EditID).className = "kortele_g";
+      }
+  
+        modalEdit.style.display = "none";
     }
 }
 
