@@ -6,6 +6,12 @@ Draudžiama naudotis CSS frameworkais (pvz. bootstrap)Duomenys turi būtų laiko
 Didžiausias dėmesys bus atkreipiamas į išvaizdą ir UI (kaip patogu naudotis).Užduotis.
 
 JS todo listas [html,css,js]
-(JS uzduoti atlieka, pasiliko json)
+
+DB // https://my-json-server.typicode.com/VytasGadliauskas/ToDo
 
 https://vytasgadliauskas.github.io/ToDo/todo.html
+
+
+
+Uzrasai:
+DB // https://my-json-server.typicode.com/VytasGadliauskas/ToDo
