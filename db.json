@@ -1,34 +1,35 @@
-{
-   "korteles": [
-         {
-            "id": "k1",
-            "spalva": "g",
-            "pavadinimas": "Pavadinimas1",
-            "aprasymas": "Aprasymas geltona kortele",
-            "complited": false
-        },
-        {
-            "id": "k2",
-            "spalva": "r",
-            "pavadinimas": "Pavadinimas2",
-            "aprasymas": "Aprasymas raudona kortele",
-            "complited": false
-        },
-        {
-            "id": "k3",
-            "spalva": "z",
-            "pavadinimas": "Pavadinimas3",
-            "aprasymas": "Aprasymas zalia kortele",
-            "complited": false
-        },
-        {
-            "id": "k4",
-            "spalva": "m",
-            "pavadinimas": "Pavadinimas4",
-            "aprasymas": "Aprasymas melyna kortele",
-            "complited": false
-        }
-    ]
-}
+[
+  
+    {
+       "id": "k1",
+       "spalva": "g",
+       "pavadinimas": "Pavadinimas1",
+       "aprasymas": "Aprasymas geltona kortele",
+       "complited": false
+   },
+   {
+       "id": "k2",
+       "spalva": "r",
+       "pavadinimas": "Pavadinimas2",
+       "aprasymas": "Aprasymas raudona kortele",
+       "complited": false
+   },
+   {
+       "id": "k3",
+       "spalva": "z",
+       "pavadinimas": "Pavadinimas3",
+       "aprasymas": "Aprasymas zalia kortele",
+       "complited": false
+   },
+   {
+       "id": "k4",
+       "spalva": "m",
+       "pavadinimas": "Pavadinimas4",
+       "aprasymas": "Aprasymas melyna kortele",
+       "complited": false
+   }
+
+]
+
 
 
