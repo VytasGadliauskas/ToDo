@@ -147,19 +147,21 @@ function myAdd() {
     modalAdd.style.display = "none";
 }
 
-
-
 //////////////////////////////////////////////// JSON kodas
 
 function myDBLoad() {
     const xmlhttp = new XMLHttpRequest();
     xmlhttp.onload = function() {
     const myDB = JSON.parse(this.responseText);
-        console.log('Gauta DB: ', myDB);
+        // console.log('Gauta DB: ', myDB);
         // console.log(' -- ', myDB.korteles[1]); 
-        for (let i = 1; i <= Object.keys(myDB.korteles).length; i++) {
-            console.log('kortele: ', i);
-            console.log(myDB.korteles[i]);
+        for (let i = 0; i < Object.keys(myDB.korteles).length; i++) {
+            // console.log('kortele: ', i);
+            // console.log(myDB.korteles[i].pavadinimas);
+            ////////////////////////////////////  formuoju kortleles gautas is jsonDB
+            myDBAdd(myDB.korteles[i]);
+
+
         }
     }
     xmlhttp.open("GET", "https://my-json-server.typicode.com/VytasGadliauskas/ToDo/db");
@@ -170,7 +172,7 @@ function myDBLoad() {
 function myDBAdd(myKortele) {
 
     var element = document.createElement("div");
-    switch(myKortele) {
+    switch(myKortele.spalva) {
       case "g":
         element.className = "kortele_g";
         break;
@@ -186,8 +188,8 @@ function myDBAdd(myKortele) {
       default:
         element.className = "kortele_g";
     }
-    var myNaujaKortNum = myKorteliuSum+1;
-    element.id = 'k'+myNaujaKortNum;
+    
+    element.id = myKortele.id;
     console.log("Naujos korteles id: "+element.id)
     let btnEdit = document.createElement("button");
     btnEdit.innerHTML = "<img src='img/edit.png' alt='' width='20'>";
@@ -198,13 +200,11 @@ function myDBAdd(myKortele) {
     element.appendChild(btnEdit);
     element.appendChild(btnDel);
     var kortH3 = document.createElement("h3");
-    kortH3.id = 'myEditH3-k'+myNaujaKortNum;
-    kortH3.innerHTML = document.getElementById("kortPavadinimas").value;
-    console.log('Naujos korteles pavadinimas: '+document.getElementById("kortPavadinimas").value);
+    kortH3.id = 'myEditH3-'+myKortele.id;
+    kortH3.innerHTML = myKortele.pavadinimas;
     var kortP = document.createElement("p");
-    kortP.id = 'myEditP-k'+myNaujaKortNum;
-    console.log('Naujos korteles aprasymas: '+document.getElementById("kortAprasymas").value);
-    kortP.innerHTML = document.getElementById("kortAprasymas").value;
+    kortP.id = 'myEditP-'+myKortele.id;
+    kortP.innerHTML = myKortele.aprasymas;
     element.appendChild(kortH3);
     element.appendChild(kortP);
     document.getElementById('myKorteles').appendChild(element);
