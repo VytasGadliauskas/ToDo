@@ -150,7 +150,8 @@ function myAdd() {
 
 //////////////////////////////////////////////// JSON kodas
 
-function jsonDB() {
+function jsonDBload() {
+    
 
 }
 
