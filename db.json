@@ -3,29 +3,29 @@
          {
             "id": "k1",
             "spalva": "g",
-            "pavadinimas": "Pavadinimas",
-            "aprasymas": "Aprasymas",
+            "pavadinimas": "Pavadinimas1",
+            "aprasymas": "Aprasymas geltona kortele",
             "statusas": true
         },
         {
             "id": "k2",
             "spalva": "r",
-            "pavadinimas": "Pavadinimas",
-            "aprasymas": "Aprasymas",
+            "pavadinimas": "Pavadinimas2",
+            "aprasymas": "Aprasymas raudona kortele",
             "statusas": true
         },
         {
             "id": "k3",
             "spalva": "z",
-            "pavadinimas": "Pavadinimas",
-            "aprasymas": "Aprasymas",
+            "pavadinimas": "Pavadinimas3",
+            "aprasymas": "Aprasymas zalia kortele",
             "statusas": true
         },
         {
             "id": "k4",
             "spalva": "m",
-            "pavadinimas": "Pavadinimas",
-            "aprasymas": "Aprasymas",
+            "pavadinimas": "Pavadinimas4",
+            "aprasymas": "Aprasymas melyna kortele",
             "statusas": true
         }
     ]
