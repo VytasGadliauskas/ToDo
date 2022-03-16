@@ -126,11 +126,11 @@ function myAdd() {
     element.id = 'k'+myNaujaKortNum;
     console.log("Naujos korteles id: "+element.id)
     let btnEdit = document.createElement("button");
-    btnEdit.innerHTML = "<img src='edit.png' alt='' width='20'>";
+    btnEdit.innerHTML = "<img src='img/edit.png' alt='' width='20'>";
     btnEdit.setAttribute('onclick', 'myEdit("'+element.id+'")')
     let btnDel = document.createElement("button");
     btnDel.setAttribute('onclick', 'myKorteleDelete("'+element.id+'")')
-    btnDel.innerHTML = "<img src='delete.png' alt='' width='20'>";
+    btnDel.innerHTML = "<img src='img/delete.png' alt='' width='20'>";
     element.appendChild(btnEdit);
     element.appendChild(btnDel);
     var kortH3 = document.createElement("h3");
