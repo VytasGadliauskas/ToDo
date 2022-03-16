@@ -1,28 +1,35 @@
 {
-    "k1":{
-        "spalva": "g",
-        "pavadinimas": "Pavadinimas",
-        "aprasymas": "Aprasymas",
-        "statusas": true
-    },
-    "k2": {
-        "spalva": "r",
-        "pavadinimas": "Pavadinimas",
-        "aprasymas": "Aprasymas",
-        "statusas": true
-    },
-    "k3":{
-        "spalva": "z",
-        "pavadinimas": "Pavadinimas",
-        "aprasymas": "Aprasymas",
-        "statusas": true
-    },
-    "k4":{
-        "spalva": "m",
-        "pavadinimas": "Pavadinimas",
-        "aprasymas": "Aprasymas",
-        "statusas": true
-    }
+   "korteles": [
+  
+        {
+            "id": "k1",
+            "spalva": "g",
+            "pavadinimas": "Pavadinimas",
+            "aprasymas": "Aprasymas",
+            "statusas": true
+        },
+        {
+            "id": "k2",
+            "spalva": "r",
+            "pavadinimas": "Pavadinimas",
+            "aprasymas": "Aprasymas",
+            "statusas": true
+        },
+        {
+            "id": "k3",
+            "spalva": "z",
+            "pavadinimas": "Pavadinimas",
+            "aprasymas": "Aprasymas",
+            "statusas": true
+        },
+        {
+            "id": "k4",
+            "spalva": "m",
+            "pavadinimas": "Pavadinimas",
+            "aprasymas": "Aprasymas",
+            "statusas": true
+        }
+    ]
 }
 
 
