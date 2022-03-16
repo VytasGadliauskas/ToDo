@@ -150,8 +150,14 @@ function myAdd() {
 
 //////////////////////////////////////////////// JSON kodas
 
-function jsonDBload() {
-    
+function myDBLoad() {
+    const xmlhttp = new XMLHttpRequest();
+    xmlhttp.onload = function() {
+    const myDB = JSON.parse(this.responseText);
+        console.log(myDB);
+    }
+    xmlhttp.open("GET", "https://my-json-server.typicode.com/VytasGadliauskas/ToDo/db");
+    xmlhttp.send();
 
 }
 

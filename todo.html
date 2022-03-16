@@ -9,9 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="todo.css">
     <title>Simple JS ToDo</title>
-
+    
 </head>
-<body>
+<body onload="myDBLoad()">
 
 <div class="virsus">
     <div class="virsus1"> <img src="todo.jpeg" alt="Logo" width="100" height="100"> </div>
@@ -23,8 +23,7 @@
     
     <div class="menu">
         <button id="myBtnAdd">Prideti nauja kortele</button>    
-        <button id="myBtnJsonDBLoad">Prisijungti prie JSON DB</button>
-        <button id="myBtnJsonExport" disabled>Eksportuoti JSON faila</button> 
+        <h6>Naudojamas Jason Server</h6>
     </div>
     <div class="korteles" id="myKorteles">
         <div class="kortele_g" id="k1"> 
@@ -103,6 +102,6 @@
   </div>
 
     
-<script src="todo.js"></script>
+  <script src="todo.js"></script>
 </body>
 </html>
