@@ -156,11 +156,14 @@ function myDBLoad() {
     xmlhttp.onload = function() {
     const myDB = JSON.parse(this.responseText);
         console.log('Gauta DB: ', myDB);
-        console.log('   db yra korteliu: ', Object. keys(myDB).length); 
+        // console.log(' -- ', myDB.korteles[1]); 
+        for (let i = 1; i <= Object.keys(myDB.korteles).length; i++) {
+            console.log('kortele: ', i);
+            console.log(myDB.korteles[i]);
+        }
     }
     xmlhttp.open("GET", "https://my-json-server.typicode.com/VytasGadliauskas/ToDo/db");
     xmlhttp.send();
-
 }
 
 ///////////////////////////////////////////////  JSON DB add korteles funkcija
