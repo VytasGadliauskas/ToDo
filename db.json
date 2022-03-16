@@ -1,4 +1,4 @@
-[
+{
     "k1":{
         "spalva": "g",
         "pavadinimas": "Pavadinimas",
@@ -23,7 +23,6 @@
         "aprasymas": "Aprasymas",
         "statusas": true
     }
-
-]
+}
 
 
