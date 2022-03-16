@@ -147,28 +147,26 @@ function myAdd() {
     modalAdd.style.display = "none";
 }
 
-//////////////////////////////////////////////// JSON kodas
+//////////////////////////////////////////////// JSON DB pakrauna korteles i UI
 
 function myDBLoad() {
+    document.getElementById("myProgress").value =0;
     const xmlhttp = new XMLHttpRequest();
     xmlhttp.onload = function() {
     const myDB = JSON.parse(this.responseText);
-        // console.log('Gauta DB: ', myDB);
-        // console.log(' -- ', myDB.korteles[1]); 
+        let myProgressStep = 100 / Object.keys(myDB.korteles).length;
         for (let i = 0; i < Object.keys(myDB.korteles).length; i++) {
-            // console.log('kortele: ', i);
-            // console.log(myDB.korteles[i].pavadinimas);
-            ////////////////////////////////////  formuoju kortleles gautas is jsonDB
             myDBAdd(myDB.korteles[i]);
-
-
+            myProgressStep = myProgressStep + myProgressStep;
+            document.getElementById("myProgress").value = myProgressStep;
         }
     }
     xmlhttp.open("GET", "https://my-json-server.typicode.com/VytasGadliauskas/ToDo/db");
     xmlhttp.send();
+   // document.getElementById("myProgress").value = 100;
 }
 
-///////////////////////////////////////////////  JSON DB add korteles funkcija
+///////////////////////////////////////////////  JSON DB add i UI korteles funkcija
 function myDBAdd(myKortele) {
 
     var element = document.createElement("div");
