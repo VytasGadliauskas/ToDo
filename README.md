@@ -15,4 +15,6 @@ https://vytasgadliauskas.github.io/ToDo/todo.html
 https://github.com/VytasGadliauskas/ToDo/tree/SuJsonServerDB 
 
 
+You can use GET, POST, PUT, PATCH and DELETE. Changes aren't persisted between calls.
+
 

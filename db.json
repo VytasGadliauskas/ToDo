@@ -1,5 +1,5 @@
-{
-   "korteles": [
+[
+  
          {
             "id": "k1",
             "spalva": "g",
@@ -28,7 +28,7 @@
             "aprasymas": "Aprasymas melyna kortele",
             "complited": false
         }
-    ]
-}
+    
+]
 
 

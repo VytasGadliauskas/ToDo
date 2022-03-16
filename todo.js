@@ -155,13 +155,54 @@ function myDBLoad() {
     const xmlhttp = new XMLHttpRequest();
     xmlhttp.onload = function() {
     const myDB = JSON.parse(this.responseText);
-        console.log(myDB);
+        console.log('Gauta DB: ', myDB);
+        console.log('   db yra korteliu: ', Object. keys(myDB).length); 
     }
     xmlhttp.open("GET", "https://my-json-server.typicode.com/VytasGadliauskas/ToDo/db");
     xmlhttp.send();
 
 }
 
+///////////////////////////////////////////////  JSON DB add korteles funkcija
+function myDBAdd(myKortele) {
 
-
-
+    var element = document.createElement("div");
+    switch(myKortele) {
+      case "g":
+        element.className = "kortele_g";
+        break;
+      case "z":
+        element.className = "kortele_z";
+        break;
+      case "m":
+        element.className = "kortele_m";
+        break; 
+      case "r":
+        element.className = "kortele_r";
+        break;   
+      default:
+        element.className = "kortele_g";
+    }
+    var myNaujaKortNum = myKorteliuSum+1;
+    element.id = 'k'+myNaujaKortNum;
+    console.log("Naujos korteles id: "+element.id)
+    let btnEdit = document.createElement("button");
+    btnEdit.innerHTML = "<img src='edit.png' alt='' width='20'>";
+    btnEdit.setAttribute('onclick', 'myEdit("'+element.id+'")')
+    let btnDel = document.createElement("button");
+    btnDel.setAttribute('onclick', 'myKorteleDelete("'+element.id+'")')
+    btnDel.innerHTML = "<img src='delete.png' alt='' width='20'>";
+    element.appendChild(btnEdit);
+    element.appendChild(btnDel);
+    var kortH3 = document.createElement("h3");
+    kortH3.id = 'myEditH3-k'+myNaujaKortNum;
+    kortH3.innerHTML = document.getElementById("kortPavadinimas").value;
+    console.log('Naujos korteles pavadinimas: '+document.getElementById("kortPavadinimas").value);
+    var kortP = document.createElement("p");
+    kortP.id = 'myEditP-k'+myNaujaKortNum;
+    console.log('Naujos korteles aprasymas: '+document.getElementById("kortAprasymas").value);
+    kortP.innerHTML = document.getElementById("kortAprasymas").value;
+    element.appendChild(kortH3);
+    element.appendChild(kortP);
+    document.getElementById('myKorteles').appendChild(element);
+}
