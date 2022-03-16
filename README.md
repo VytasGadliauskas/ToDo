@@ -11,8 +11,8 @@ https://vytasgadliauskas.github.io/ToDo/todo.html
 
 
 
+2022-03-16  Prijungiama JsonServer DB, naujas git branch'as [SuJsonServerDB] 
+https://github.com/VytasGadliauskas/ToDo/tree/SuJsonServerDB 
 
 
 
-Uzrasai:
-DB // https://my-json-server.typicode.com/VytasGadliauskas/ToDo
