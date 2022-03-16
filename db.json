@@ -1,17 +1,18 @@
-[
-   {
-       "id": "k1",
-       "spalva": "g",
-       "pavadinimas": "Pavadinimas1",
-       "aprasymas": "Aprasymas geltona kortele",
-       "complited": false
+{
+    "korteles":[
+    {
+        "id": "k1",
+        "spalva": "g",
+        "pavadinimas": "Pavadinimas1",
+        "aprasymas": "Aprasymas geltona kortele",
+        "complited": false
    },
    {
-       "id": "k2",
-       "spalva": "r",
-       "pavadinimas": "Pavadinimas2",
-       "aprasymas": "Aprasymas raudona kortele",
-       "complited": false
+        "id": "k2",
+        "spalva": "r",
+        "pavadinimas": "Pavadinimas2",
+        "aprasymas": "Aprasymas raudona kortele",
+        "complited": false
    },
    {
        "id": "k3",
@@ -27,6 +28,6 @@
        "aprasymas": "Aprasymas melyna kortele",
        "complited": false
    }
-
-]
+  ]
+}
 
