@@ -20,4 +20,3 @@ To be able to provide a free service to as many people as possible during this p
 . db.json has limits
 . All servers are public
 . Private GitHub repositories aren't supported (yet)
-
