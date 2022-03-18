@@ -207,3 +207,6 @@ function myDBAdd(myKortele) {
     element.appendChild(kortP);
     document.getElementById('myKorteles').appendChild(element);
 }
+
+///////////////////////////////////////////////  Prideda korteles sirasa i JSON DB
+   
