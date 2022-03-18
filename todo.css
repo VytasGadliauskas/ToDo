@@ -105,7 +105,11 @@
 }
 
 button {
+    border: 1px solid;
+    border-color: darkgray;
+    border-radius: 10px;
     font-size: larger;
+
 }
 
 input {
