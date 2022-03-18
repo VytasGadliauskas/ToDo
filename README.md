@@ -15,8 +15,8 @@ https://vytasgadliauskas.github.io/ToDo/todo.html
 Limits
 To be able to provide a free service to as many people as possible during this phase, the project comes with a few limits:
 
-. Changes are faked and aren't persisted (just like JSONPlaceholder)
-. Requests are cached (1 minute)
-. db.json has limits
-. All servers are public
-. Private GitHub repositories aren't supported (yet)
+Changes are faked and aren't persisted (just like JSONPlaceholder)
+Requests are cached (1 minute)
+db.json has limits
+All servers are public
+Private GitHub repositories aren't supported (yet)
