@@ -113,6 +113,7 @@
 .kortele_pavadinimas {
     width: 80%;
     height: 20px;
+    cursor: move;
 }
 
 .kortele_atlikta {
