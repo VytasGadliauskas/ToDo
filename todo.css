@@ -1,11 +1,9 @@
 
 .virsus {
-   /* border: solid 2px; */
     background-color: rgb(177, 177, 177);
     border-radius: 5px;
     width: 100%;
     display: flex;
-   /* flex-wrap: wrap; */
     align-items: center;
     justify-items: center;
 }
@@ -141,6 +139,16 @@ h3 {
 
 p {
     margin: 0;
+}
+
+.footer {
+    margin-top: 10px;
+    background-color: rgb(177, 177, 177);
+    border-radius: 5px;
+    width: 100%;
+    position: sticky;
+    bottom: 1px;
+    text-align: right;
 }
 
 

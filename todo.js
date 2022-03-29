@@ -103,6 +103,7 @@ function myEdit(EditID) {
         //////////////////////////  JSON  UPDATE
         myEditToDB(myKortele);
         modalEdit.style.display = "none";
+        status_bar_korteles();
     }
 }
 
@@ -114,7 +115,8 @@ function myKorteleDelete(myKortID) {
             const myobj = document.getElementById(myKortID);
             myobj.remove();
             myDeleteToDB(myKortID);
-        }    
+        }  
+    status_bar_korteles();      
  }
 
 ///////////////////////////////////////////////  Prideti kortele kodas
@@ -182,6 +184,7 @@ function myAdd() {
     // JSON 
     myAddToDB(myKortele);
     modalAdd.style.display = "none";
+    status_bar_korteles();
 }
 
 //////////////////////////////////////////////// JSON DB pakrauna korteles i UI
@@ -251,6 +254,7 @@ function myDBAdd(myKortele) {
     element.appendChild(divmenu); 
     element.appendChild(kortP);
     document.getElementById('myKorteles').appendChild(element);
+    status_bar_korteles()
 }
 
 ///////////////////////////////////////////////  Prideda korteles irasa i JSON DB
@@ -327,3 +331,38 @@ function myDeleteToDB(myKortelesID) {
    document.getElementById("myProgress").value = 100;
    alert("Changes are faked and aren't persisted just like JSONPlaceholder, Requests are cached (1 minute)");
 }
+
+///////////////////////////////////////////////// Status BAR
+
+function status_bar_korteles() {
+  let geltonos = document.getElementsByClassName("kortele_g");
+  let melynos = document.getElementsByClassName("kortele_m");
+  let raudonos = document.getElementsByClassName("kortele_r");
+  let zalios = document.getElementsByClassName("kortele_z");
+  let status_g = document.getElementById("status-g");
+  let status_r = document.getElementById("status-r");
+  let status_m = document.getElementById("status-m");
+  let status_z = document.getElementById("status-z");
+  if (typeof(geltonos) != undefined) {
+    status_g.innerText = "Geltonu "+(geltonos.length);
+  } else {
+    status_g.innerText = "Geltonu 0";
+  }   
+  if (typeof(raudonos) != undefined) {
+    status_r.innerText = "Raudonu "+(raudonos.length);
+  } else {
+    status_r.innerText = "Raudonu 0";
+  }   
+  if (typeof(geltonos) != undefined) {
+    status_m.innerText = "Melynu "+(melynos.length);
+  } else {
+    status_m.innerText = "Melynu 0";
+  }   
+  if (typeof(geltonos) != undefined) {
+    status_z.innerText = "Zaliu "+(zalios.length);
+  } else {
+    status_z.innerText = "Zaliu 0";
+  } 
+}
+
+
