@@ -128,7 +128,7 @@ button {
     border-color: darkgray;
     border-radius: 10px;
     font-size: larger;
-
+    opacity: 0.5; 
 }
 
 input {

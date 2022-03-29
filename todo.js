@@ -13,26 +13,17 @@
       modalAdd.style.display = "none";
     }
 
-    //window.onclick = function(event) {
-    //  if (event.target == modalAdd) {
-    //    modalAdd.style.display = "none";
-    //  }
-    //}
-
 //////////////////////////////////////////////// modal Edit kodas
 
 function myEdit(EditID) {
     let myID = EditID.slice(1);
-    // console.log('Edit ID: ', myID,' ',EditID );
     let modalEdit = document.getElementById("myModalEdit");
-    // console.log("'myBtnEdit-k"+myID+"'"); 
     let btnEdit = document.getElementById("'myBtnEdit-k"+myID+"'");
     let spanEdit = document.getElementsByClassName("closeEdit")[0];
     modalEdit.style.display = "block";
     let myH3ID="myEditH3-k"+myID;
     let myPID="myEditP-k"+myID;
     let myCID = document.getElementById(EditID).className; 
-    // console.log("Korteles spalva: ",myCID);
     document.getElementById("kortPavadinimasEdit").value = document.getElementById(myH3ID).innerText;
     document.getElementById("kortAprasymasEdit").value = document.getElementById(myPID).innerText;
     switch (myCID){
@@ -57,12 +48,6 @@ function myEdit(EditID) {
         modalEdit.style.display = "none";
     }
 
-   // window.onclick = function(event) {
-   //     if (event.target == modalEdit) {
-   //       modalEdit.style.display = "none";
-   //     }
-   // }
-
     //////////////////////////////////////////////// Edit Save korteles kodas
     let buttonSave = document.getElementById('btnEditSave');
     let myKortele ={
@@ -78,7 +63,6 @@ function myEdit(EditID) {
         myKortele.pavadinimas = document.getElementById("kortPavadinimasEdit").value;
         document.getElementById(myPID).innerText = document.getElementById("kortAprasymasEdit").value;
         myKortele.aprasymas = document.getElementById("kortAprasymasEdit").value;
-       // console.log('Edit ID: ',EditID );
         switch (document.getElementById("myKortSpalvEdit").value){
           case "g":
               document.getElementById(EditID).className = "kortele_g";
@@ -130,7 +114,6 @@ function myAdd() {
                     "aprasymas": "",
                     "complited": false
                   };
-    //console.log("Korteliu suma: "+myKorteliuSum)
     let element = document.createElement("div");
     switch(document.getElementById("myKortSpalv").value) {
       case "g":
@@ -209,7 +192,6 @@ function myDBLoad() {
 
 ///////////////////////////////////////////////  JSON DB add i UI korteles funkcija
 function myDBAdd(myKortele) {
-
   let element = document.createElement("div");
     switch(myKortele.spalva) {
       case "g":
@@ -229,7 +211,6 @@ function myDBAdd(myKortele) {
     }
     
     element.id = myKortele.id;
-    // console.log("Naujos korteles id: "+element.id)
     let btnEdit = document.createElement("button");
     btnEdit.innerHTML = "<img src='img/edit.png' alt='' width='20'>";
     btnEdit.setAttribute('onclick', 'myEdit("'+element.id+'")')
@@ -267,7 +248,6 @@ function myAddToDB(myKortele) {
     "User-Agent": "Thunder Client (https://www.thunderclient.com)",
     "Content-Type": "application/json"
    }
-    
    fetch("https://my-json-server.typicode.com/VytasGadliauskas/ToDo/korteles/", { 
      method: "POST",
      body: bodyContent,
@@ -288,13 +268,11 @@ function myEditToDB(myKortele) {
   console.log(myKortele);
   let myURI = "'https://my-json-server.typicode.com/VytasGadliauskas/ToDo/korteles/"+myKortele.id+"'";
   let bodyContent = JSON.stringify(myKortele);
-
   let headersList = {
     "Accept": "*/*",
     "User-Agent": "Thunder Client (https://www.thunderclient.com)",
     "Content-Type": "application/json"
    }
- 
    fetch(myURI, { 
      method: "PUT",
      body: bodyContent,
@@ -304,7 +282,6 @@ function myEditToDB(myKortele) {
    }).then(function(data) {
      console.log(data);
    })
-
   document.getElementById("myProgress").value = 100;
   alert("Changes are faked and aren't persisted just like JSONPlaceholder, Requests are cached (1 minute)");
 } 
@@ -314,12 +291,10 @@ function myEditToDB(myKortele) {
 function myDeleteToDB(myKortelesID) {
   document.getElementById("myProgress").value = 0;
   let myURI = "'https://my-json-server.typicode.com/VytasGadliauskas/ToDo/korteles/"+myKortelesID+"'";
-
   let headersList = {
     "Accept": "*/*",
     "User-Agent": "Thunder Client (https://www.thunderclient.com)"
    }
-   
    fetch("https://my-json-server.typicode.com/VytasGadliauskas/ToDo/korteles/k2", { 
      method: "DELETE",
      headers: headersList
