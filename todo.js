@@ -154,26 +154,29 @@ function myAdd() {
     let myNaujaKortNum = myKorteliuSum+1;
     element.id = 'k'+myNaujaKortNum;
     myKortele.id = element.id;
-    // console.log("Naujos korteles id: "+element.id)
     let btnEdit = document.createElement("button");
     btnEdit.innerHTML = "<img src='img/edit.png' alt='' width='20'>";
     btnEdit.setAttribute('onclick', 'myEdit("'+element.id+'")')
     let btnDel = document.createElement("button");
     btnDel.setAttribute('onclick', 'myKorteleDelete("'+element.id+'")')
     btnDel.innerHTML = "<img src='img/delete.png' alt='' width='20'>";
-    element.appendChild(btnEdit);
-    element.appendChild(btnDel);
+    let divmenu = document.createElement("div");
+    divmenu.className = "kortele_menu";
+    divmenu.appendChild(btnEdit);
+    divmenu.appendChild(btnDel);
+    let divpavadininimas = document.createElement("div");
+    divpavadininimas.className = "kortele_pavadinimas";
     let kortH3 = document.createElement("h3");
     kortH3.id = 'myEditH3-k'+myNaujaKortNum;
     kortH3.innerHTML = document.getElementById("kortPavadinimas").value;
-    // console.log('Naujos korteles pavadinimas: '+document.getElementById("kortPavadinimas").value);
     myKortele.pavadinimas = document.getElementById("kortPavadinimas").value;
+    divpavadininimas.appendChild(kortH3);
+    element.appendChild(divpavadininimas);
+    element.appendChild(divmenu); 
     let kortP = document.createElement("p");
     kortP.id = 'myEditP-k'+myNaujaKortNum;
-    // console.log('Naujos korteles aprasymas: '+document.getElementById("kortAprasymas").value);
     myKortele.aprasymas = document.getElementById("kortAprasymas").value;
     kortP.innerHTML = document.getElementById("kortAprasymas").value;
-    element.appendChild(kortH3);
     element.appendChild(kortP);
     document.getElementById('myKorteles').appendChild(element);
     // JSON 
@@ -230,15 +233,22 @@ function myDBAdd(myKortele) {
     let btnDel = document.createElement("button");
     btnDel.setAttribute('onclick', 'myKorteleDelete("'+element.id+'")')
     btnDel.innerHTML = "<img src='img/delete.png' alt='' width='20'>";
-    element.appendChild(btnEdit);
-    element.appendChild(btnDel);
+    let divmenu = document.createElement("div");
+    divmenu.className = "kortele_menu";
+    divmenu.appendChild(btnEdit);
+    divmenu.appendChild(btnDel);
+    element.appendChild(divmenu); 
+    let divpavadininimas = document.createElement("div");
+    divpavadininimas.className = "kortele_pavadinimas";
     let kortH3 = document.createElement("h3");
     kortH3.id = 'myEditH3-'+myKortele.id;
     kortH3.innerHTML = myKortele.pavadinimas;
     let kortP = document.createElement("p");
     kortP.id = 'myEditP-'+myKortele.id;
     kortP.innerHTML = myKortele.aprasymas;
-    element.appendChild(kortH3);
+    divpavadininimas.appendChild(kortH3);
+    element.appendChild(divpavadininimas); 
+    element.appendChild(divmenu); 
     element.appendChild(kortP);
     document.getElementById('myKorteles').appendChild(element);
 }
