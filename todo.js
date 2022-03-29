@@ -92,6 +92,7 @@ function myEdit(EditID) {
         myEditToDB(myKortele);
         modalEdit.style.display = "none";
         status_bar_korteles();
+        status_bar_atlikta();
     }
 }
 
@@ -104,7 +105,8 @@ function myKorteleDelete(myKortID) {
             myobj.remove();
             myDeleteToDB(myKortID);
         }  
-    status_bar_korteles();      
+    status_bar_korteles(); 
+    status_bar_atlikta();     
  }
 
 ///////////////////////////////////////////////  Prideti kortele kodas
@@ -172,6 +174,7 @@ function myAdd() {
     myAddToDB(myKortele);
     modalAdd.style.display = "none";
     status_bar_korteles();
+    status_bar_atlikta();
 }
 
 //////////////////////////////////////////////// JSON DB pakrauna korteles i UI
@@ -239,7 +242,8 @@ function myDBAdd(myKortele) {
     element.appendChild(divmenu); 
     element.appendChild(kortP);
     document.getElementById('myKorteles').appendChild(element);
-    status_bar_korteles()
+    status_bar_korteles();
+    status_bar_atlikta();
 }
 
 ///////////////////////////////////////////////  Prideda korteles irasa i JSON DB
@@ -345,7 +349,12 @@ function status_bar_korteles() {
 }
 
 function status_bar_atlikta() {
-  let korteliuNumb = document.getElementById("korteles").childElementCount;
-  document.getElementById("myKortAtlikta").value 
-
+  let korteliuNumb = document.getElementById("myKorteles").childElementCount;
+  let atliktuKorteliuNumb = document.querySelectorAll('.kortele_atlikta').length;
+  console.log(atliktuKorteliuNumb[0]);
+  let progress = document.getElementsByClassName("footer_progress"); 
+  let bar = document.getElementsByClassName("footer_progress_bar");
+  let procentai = (atliktuKorteliuNumb/korteliuNumb)*100;
+  bar[0].innerText = procentai+"%";
+  bar[0].style.width = procentai+"%";
 }
