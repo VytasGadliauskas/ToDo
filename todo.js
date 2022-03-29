@@ -354,7 +354,11 @@ function status_bar_atlikta() {
   console.log(atliktuKorteliuNumb[0]);
   let progress = document.getElementsByClassName("footer_progress"); 
   let bar = document.getElementsByClassName("footer_progress_bar");
-  let procentai = (atliktuKorteliuNumb/korteliuNumb)*100;
+  let procentai = Math.round((atliktuKorteliuNumb/korteliuNumb)*100);
   bar[0].innerText = procentai+"%";
   bar[0].style.width = procentai+"%";
 }
+
+///////////////////////////////////////////////// Muvinimas
+
+

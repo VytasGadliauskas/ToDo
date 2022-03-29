@@ -159,7 +159,6 @@ p {
     width: 30%;
     height: 20px;
     background-color: white;
-    border-radius: 5px;
     text-align: center;
 }
 
@@ -168,8 +167,6 @@ p {
     width: 0%;
     height: 20px;
     background-color: blue;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
     color: grey;
     text-align: right;
 }
