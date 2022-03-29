@@ -43,6 +43,7 @@ function myEdit(EditID) {
             document.getElementById("myKortSpalvEdit").value = "g";
     }
     
+
     
     spanEdit.onclick = function() {
         modalEdit.style.display = "none";
@@ -57,7 +58,7 @@ function myEdit(EditID) {
                     "aprasymas": "",
                     "complited": false
                   };
-    myKortele.id= EditID;
+    myKortele.id = EditID;
     buttonSave.onclick = function() {
         document.getElementById(myH3ID).innerText = document.getElementById("kortPavadinimasEdit").value;
         myKortele.pavadinimas = document.getElementById("kortPavadinimasEdit").value;
@@ -84,6 +85,11 @@ function myEdit(EditID) {
               document.getElementById(EditID).className = "kortele_g";
               myKortele.spava = "g";
       }
+      
+        if (document.getElementById("kortAtlikta").checked == true ) {
+          document.getElementById(EditID).classList.add("kortele_atlikta");
+        }
+
         //////////////////////////  JSON  UPDATE
         myEditToDB(myKortele);
         modalEdit.style.display = "none";
