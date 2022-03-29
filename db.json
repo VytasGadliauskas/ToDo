@@ -10,22 +10,22 @@
    {
         "id": "k2",
         "spalva": "r",
-        "pavadinimas": "Pavadinimas2",
-        "aprasymas": "Aprasymas raudona kortele",
+        "pavadinimas": "CSS",
+        "aprasymas": "CSS – kalba, skirta nusakyti kita struktūrine kalba aprašyto dokumento vaizdavimą. Dažniausiai CSS aprašomas HTML dokumentų pateikimas, tačiau ją galima taikyti ir įvairiems kitomis kalbomis parašytiems dokumentams. Vikipedija https://lt.wikipedia.org/wiki/CSS",
         "complited": false
    },
    {
        "id": "k3",
        "spalva": "z",
-       "pavadinimas": "Pavadinimas3",
-       "aprasymas": "Aprasymas zalia kortele",
+       "pavadinimas": "JavaScript",
+       "aprasymas": "JavaScript – objektiškai orientuota skriptų programavimo kalba, besiremianti prototipų principu. Dažniausiai kalba naudojama internetinių puslapių interaktyvumo realizacijai, bet taip pat naudojama ir kaip galimybė skriptais manipuliuoti tam tikromis programomis. Vikipedija",
        "complited": false
    },
    {
        "id": "k4",
        "spalva": "m",
-       "pavadinimas": "Pavadinimas4",
-       "aprasymas": "Aprasymas melyna kortele",
+       "pavadinimas": "JSON",
+       "aprasymas": "JSON – atviro standarto formatas, perduodantis duomenų objektus, sudarytus iš atributo ir reikšmės porų, lengvai skaitomame tekste. Tai yra pirminis asinchroninio naršyklės/serverio bendravimo duomenų formatas. Vikipedija",
        "complited": false
    }
   ]

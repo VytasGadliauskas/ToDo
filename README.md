@@ -10,6 +10,10 @@ JS todo listas [html,css,js]
 https://vytasgadliauskas.github.io/ToDo/todo.html
 
 
+Json DB
+https://my-json-server.typicode.com/VytasGadliauskas/ToDo
+
+
 2022-03-18  Pabaigta deja https://my-json-server.typicode.com/ nesaugo pakeitimu:
 
 2022-03-29  Pakeistas dizainas, senas pasiekiamas naudojant todo_kvadratai.css stiliu faila.
