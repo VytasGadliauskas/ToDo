@@ -93,6 +93,7 @@
     overflow: auto;
     display: flex;
     flex-wrap: wrap; 
+    color: white;
 }
 
 .kortele_z {
