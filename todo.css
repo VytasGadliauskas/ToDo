@@ -145,10 +145,29 @@ p {
     background-color: rgb(177, 177, 177);
     border-radius: 5px;
     width: 100%;
+    height: 30px;
     position: sticky;
     bottom: 1px;
-    text-align: right;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
 }
+
+.footer_progress {
+    width: 50%;
+    height: 20px;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    color: grey;
+}
+
+.footer_stats {
+    width: 20%;
+    text-align: center;
+}
+ 
 
 
 @media only screen and (max-width: 950px) {

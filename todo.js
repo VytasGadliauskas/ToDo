@@ -43,8 +43,6 @@ function myEdit(EditID) {
             document.getElementById("myKortSpalvEdit").value = "g";
     }
     
-
-    
     spanEdit.onclick = function() {
         modalEdit.style.display = "none";
     }
@@ -346,4 +344,8 @@ function status_bar_korteles() {
   } 
 }
 
+function status_bar_atlikta() {
+  let korteliuNumb = document.getElementById("korteles").childElementCount;
+  document.getElementById("myKortAtlikta").value 
 
+}
