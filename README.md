@@ -12,6 +12,8 @@ https://vytasgadliauskas.github.io/ToDo/todo.html
 
 2022-03-18  Pabaigta deja https://my-json-server.typicode.com/ nesaugo pakeitimu:
 
+2022-03-29  Pakiestas dizainas, senas pasiekiamas naudojant todo_kvadratai.css stiliu faila.
+
 Limits
 To be able to provide a free service to as many people as possible during this phase, the project comes with a few limits:
 
