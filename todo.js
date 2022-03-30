@@ -371,15 +371,6 @@ function status_bar_atlikta() {
   let procentai = Math.round((atliktuKorteliuNumb/korteliuNumb)*100);
   bar[0].innerText = procentai+"%";
   bar[0].style.width = procentai+"%";
-
-  if (typeof(Storage) !== "undefined") {
-    // Code for localStorage/sessionStorage.
-    localStorage.setItem("korteliu-skaicius", korteliuNumb);
-      
-  } else {
-    // Sorry! No Web Storage support..
-  }
-
 }
 
 ///////////////////////////////////////////////// Drag & Drop 
