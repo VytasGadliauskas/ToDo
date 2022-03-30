@@ -169,6 +169,13 @@ function myAdd() {
     myKortele.aprasymas = document.getElementById("kortAprasymas").value;
     kortP.innerHTML = document.getElementById("kortAprasymas").value;
     element.appendChild(kortP);
+    element.draggable = true;
+    element.addEventListener('dragstart', dragStart);
+    element.addEventListener('dragend', dragEnd);
+    element.addEventListener('dragenter', dragEnter);
+    element.addEventListener('dragleave', dragLeave);
+    element.addEventListener('dragover', dragOver);
+    element.addEventListener('drop', dragDrop);
     document.getElementById('myKorteles').appendChild(element);
     // JSON 
     myAddToDB(myKortele);
@@ -241,6 +248,13 @@ function myDBAdd(myKortele) {
     element.appendChild(divpavadininimas); 
     element.appendChild(divmenu); 
     element.appendChild(kortP);
+    element.draggable = true;
+    element.addEventListener('dragstart', dragStart);
+    element.addEventListener('dragend', dragEnd);
+    element.addEventListener('dragenter', dragEnter);
+    element.addEventListener('dragleave', dragLeave);
+    element.addEventListener('dragover', dragOver);
+    element.addEventListener('drop', dragDrop);
     document.getElementById('myKorteles').appendChild(element);
     status_bar_korteles();
     status_bar_atlikta();
@@ -357,8 +371,76 @@ function status_bar_atlikta() {
   let procentai = Math.round((atliktuKorteliuNumb/korteliuNumb)*100);
   bar[0].innerText = procentai+"%";
   bar[0].style.width = procentai+"%";
+
+  if (typeof(Storage) !== "undefined") {
+    // Code for localStorage/sessionStorage.
+    localStorage.setItem("korteliu-skaicius", korteliuNumb);
+      
+  } else {
+    // Sorry! No Web Storage support..
+  }
+
 }
 
-///////////////////////////////////////////////// Muvinimas
+///////////////////////////////////////////////// Drag & Drop 
+let dragSrcEl;
+let dragSorceID;
+let dragSorceClassList;
 
+function dragStart(e) {
+  this.style.opacity = '0.4';
+  dragSrcEl = this;
+  e.dataTransfer.effectAllowed = 'move';
+  e.dataTransfer.setData('text/html', this.innerHTML);
+  dragSorceID = this.id;
+  dragSorceClassList = this.classList;
+}
 
+function dragEnd(e) {
+  this.style.opacity = '1';
+  this.classList.remove('drag_over');
+}
+
+function dragEnter(e) {
+  this.classList.add('drag_over');
+}
+
+function dragLeave(e) {
+  this.classList.remove('drag_over');
+}
+
+function dragOver(e) {
+  if (e.preventDefault) {
+    e.preventDefault();
+  }
+  return false;
+}
+
+function dragDrop(e) {
+  e.stopPropagation();
+
+  if (dragSrcEl !== this) {
+    let dragDestClassList = this.classList;
+    let dragDestID = this.id;
+
+    dragSrcEl.innerHTML = this.innerHTML;
+    dragSrcEl.id = dragDestID;
+    console.log('dragSrcEl.id ', dragSrcEl.id ,'dragDestClassList ', dragDestClassList);
+    console.log('dragDestID ', dragDestID ,'dragSorceClassList ', dragSorceClassList);
+    this.innerHTML = e.dataTransfer.getData('text/html');
+    oldClass(dragSorceID, dragDestClassList); 
+    this.id = dragSorceID;
+   
+    this.classList =  dragSorceClassList;
+    console.log('this.ClassList', this.classList);
+    console.log('dragSorceClassList ', dragSorceClassList);
+    
+  }
+  return false;
+}
+
+function oldClass(id,classlist) {
+  console.log('id ', id);
+  let aa = document.getElementById(id);
+  aa.classList.add('kortele_z'); 
+}
