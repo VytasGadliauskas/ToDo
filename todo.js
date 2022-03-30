@@ -393,7 +393,7 @@ function dragStart(e) {
   e.dataTransfer.effectAllowed = 'move';
   e.dataTransfer.setData('text/html', this.innerHTML);
   dragSorceID = this.id;
-  dragSorceClassList = this.classList;
+  dragSorceClassList = this.classList.value;
 }
 
 function dragEnd(e) {
@@ -420,27 +420,15 @@ function dragDrop(e) {
   e.stopPropagation();
 
   if (dragSrcEl !== this) {
-    let dragDestClassList = this.classList;
+    let dragDestClassList = this.classList.value;
     let dragDestID = this.id;
-
     dragSrcEl.innerHTML = this.innerHTML;
     dragSrcEl.id = dragDestID;
-    console.log('dragSrcEl.id ', dragSrcEl.id ,'dragDestClassList ', dragDestClassList);
-    console.log('dragDestID ', dragDestID ,'dragSorceClassList ', dragSorceClassList);
+    dragSrcEl.classList = dragDestClassList;
     this.innerHTML = e.dataTransfer.getData('text/html');
-    oldClass(dragSorceID, dragDestClassList); 
     this.id = dragSorceID;
-   
     this.classList =  dragSorceClassList;
-    console.log('this.ClassList', this.classList);
-    console.log('dragSorceClassList ', dragSorceClassList);
-    
   }
   return false;
 }
 
-function oldClass(id,classlist) {
-  console.log('id ', id);
-  let aa = document.getElementById(id);
-  aa.classList.add('kortele_z'); 
-}
