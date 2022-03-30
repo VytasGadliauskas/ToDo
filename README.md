@@ -18,6 +18,8 @@ https://my-json-server.typicode.com/VytasGadliauskas/ToDo
 
 2022-03-29  Pakeistas dizainas, senas pasiekiamas naudojant todo_kvadratai.css stiliu faila.
 
+2022-03-30  Prideta Drag & Drop korteliu funkcija.
+
 Limits
 To be able to provide a free service to as many people as possible during this phase, the project comes with a few limits:
 
