@@ -7,9 +7,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Smokum&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="todo.css">
-    
-    <title>Simple JS ToDo</title>
+
+    <script>
+      var link = document.createElement('link'); 
+      link.rel = 'stylesheet'; 
+      link.type = 'text/css';
+      let cukis = document.cookie;
+      cukisS = cukis.split("=");
+      console.log(cukisS[1]);
+      link.href = cukisS[1]; 
+      document.getElementsByTagName('HEAD')[0].appendChild(link); 
+    </script> 
+
+  <title>Simple JS ToDo</title>
     
 </head>
 <body onload="myDBLoad()">
@@ -65,6 +75,12 @@
 </div>
 
 <div class="footer">
+  <div>
+      <select id="css" onchange="setCSS()">
+      <option value="todo.css">Pasirinkite isvaizda</option>
+      <option value="todo_kvadratai.css">Kvadratai</option>
+      <option value="todo.css">Juostos</option>
+    </select></div>  
   <div>Atlikta&numsp;</div>
   <div class="footer_progress"><div class="footer_progress_bar">0%</div></div> 
   <div class="footer_stats"><span style="color:yellow" id="status-g"> Geltonu 0 </span> <span style="color:red" id="status-r"> Raudonu 0 </span>
