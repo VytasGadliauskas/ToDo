@@ -13,10 +13,14 @@
       link.rel = 'stylesheet'; 
       link.type = 'text/css';
       let cukis = document.cookie;
-      cukisS = cukis.split("=");
-      if (typeof(cukis) == "undefined" || cukis == " " ) {
+      console.log(cukis);
+      if (typeof(cukis) == null || cukis == "" ) {
          link.href = "todo.css"; 
-      }  else { link.href = cukisS[1]; } 
+
+      }  else { 
+        cukisS = cukis.split("=");
+        link.href = cukisS[1]; 
+      } 
       document.getElementsByTagName('HEAD')[0].appendChild(link); 
     </script> 
 
