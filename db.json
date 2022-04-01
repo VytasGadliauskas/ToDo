@@ -27,7 +27,35 @@
        "pavadinimas": "JSON",
        "aprasymas": "JSON – atviro standarto formatas, perduodantis duomenų objektus, sudarytus iš atributo ir reikšmės porų, lengvai skaitomame tekste. Tai yra pirminis asinchroninio naršyklės/serverio bendravimo duomenų formatas. Vikipedija",
        "complited": false
-   }
+   },
+   {
+    "id": "k5",
+    "spalva": "g",
+    "pavadinimas": "HTML5",
+    "aprasymas": "Versta iš anglų k.-HTML5 yra žymėjimo kalba, naudojama struktūrizuoti ir pateikti turinį žiniatinklyje. Tai penktoji ir paskutinė pagrindinė HTML versija, kurią rekomenduoja World Wide Web Consortium. Dabartinė specifikacija yra žinoma kaip HTML gyvenimo standartas. Vikipedija (anglų k.)",
+    "complited": false
+  },
+  {
+    "id": "k6",
+    "spalva": "r",
+    "pavadinimas": "CSS",
+    "aprasymas": "CSS – kalba, skirta nusakyti kita struktūrine kalba aprašyto dokumento vaizdavimą. Dažniausiai CSS aprašomas HTML dokumentų pateikimas, tačiau ją galima taikyti ir įvairiems kitomis kalbomis parašytiems dokumentams. Vikipedija https://lt.wikipedia.org/wiki/CSS",
+    "complited": false
+  },
+  {
+   "id": "k7",
+   "spalva": "z",
+   "pavadinimas": "JavaScript",
+   "aprasymas": "JavaScript – objektiškai orientuota skriptų programavimo kalba, besiremianti prototipų principu. Dažniausiai kalba naudojama internetinių puslapių interaktyvumo realizacijai, bet taip pat naudojama ir kaip galimybė skriptais manipuliuoti tam tikromis programomis. Vikipedija",
+   "complited": false
+  },
+  {
+   "id": "k8",
+   "spalva": "m",
+   "pavadinimas": "JSON",
+   "aprasymas": "JSON – atviro standarto formatas, perduodantis duomenų objektus, sudarytus iš atributo ir reikšmės porų, lengvai skaitomame tekste. Tai yra pirminis asinchroninio naršyklės/serverio bendravimo duomenų formatas. Vikipedija",
+   "complited": false
+  }
   ]
 }
 

@@ -426,10 +426,11 @@ function dragDrop(e) {
 
 //////////////////////////////////////// Isvaizdos Temos
 
-function setCSS() {
-  selectElement = document.querySelector('#css');
-  css_failas = selectElement.value;
-  console.log(css_failas);
+function setCSS(css_failas) {
   document.cookie = `todo_css_file=${css_failas}; expires=${new Date(new Date().getTime()+1000*60*60*24*365).toGMTString()}; path=/`; 
   window.location.reload();
+}
+
+function setFonas(fonas) {
+  
 }

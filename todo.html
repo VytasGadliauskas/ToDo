@@ -34,6 +34,23 @@
     <div class="virsus2"> <h1>ToDo Demo</h1> </div>
 </div>
 
+<div class="footer">
+  <div class="footer-fonai">
+      <img onclick="setFonas('fonas1.jpg')" src="img/fonas1.jpg" alt="fonas1" width="20" height="15">
+      <img onclick="setFonas('fonas2.jpg')" src="img/fonas2.jpg" alt="fonas2" width="20" height="15">
+      <img onclick="setFonas('fonas3.jpg')" src="img/fonas3.jpg" alt="fonas3" width="20" height="15">
+      <img onclick="setFonas('fonas4.jpg')" src="img/fonas4.jpg" alt="fonas4" width="20" height="15">
+  </div>
+  <div class="footer-isvaizda">
+      <img onclick="setCSS('todo.css')" src="img/list.png" alt="fonas1" width="20" height="15"> &nbsp; 
+      <img onclick="setCSS('todo_kvadratai.css')" src="img/squer.png" alt="fonas2" width="20" height="15">     
+  </div>  
+  <div>Atlikta&numsp;</div>
+  <div class="footer_progress"><div class="footer_progress_bar">0%</div></div> 
+  <div class="footer_stats"><span style="color:yellow" id="status-g"> Geltonu 0 </span> <span style="color:red" id="status-r"> Raudonu 0 </span>
+        <span style="color:blue" id="status-m"> Melynu 0 </span> <span style="color:green" id="status-z"> Zaliu 0 </span></p></div> 
+</div>  
+
 
 <div class="apacia">
     
@@ -79,30 +96,6 @@
 
     </div>
 </div>
-
-<div class="footer">
-  <div>
-      <select id="fonas" onchange="setFONAS()">
-      <option value="nustatytas">Pasirinkite fona</option>
-      <option value="nustatytas">Nustatytas</option>
-      <option value="fonas1.jpg"><img src="img/fonas1.jpg" alt="fonas1" width="20" height="15"></option>
-      <option value="fonas2.jpg"><img src="img/fonas2.jpg" alt="fonas2" width="20" height="15"></option>
-      <option value="fonas3.jpg"><img src="img/fonas3.jpg" alt="fonas3" width="20" height="15"></option>
-      <option value="fonas4.jpg"><img src="img/fonas4.jpg" alt="fonas4" width="20" height="15"></option>
-      </select>
-  </div>
-  <div>
-      <select id="css" onchange="setCSS()">
-      <option value="todo.css">Pasirinkite isvaizda</option>
-      <option value="todo_kvadratai.css">Kvadratai</option>
-      <option value="todo.css">Juostos</option>
-      </select>
-  </div>  
-  <div>Atlikta&numsp;</div>
-  <div class="footer_progress"><div class="footer_progress_bar">0%</div></div> 
-  <div class="footer_stats"><span style="color:yellow" id="status-g"> Geltonu 0 </span> <span style="color:red" id="status-r"> Raudonu 0 </span>
-        <span style="color:blue" id="status-m"> Melynu 0 </span> <span style="color:green" id="status-z"> Zaliu 0 </span></p></div> 
-</div>  
 
 <!------------------------------------------ Modal langas Add -->
 <div id="myModalAdd" class="modal">
