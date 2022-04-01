@@ -242,14 +242,14 @@ img:hover {
     background-color: rgb(177, 177, 177);
   }
   
-  .closeAdd .closeEdit {
+  .closeAdd .closeEdit .closeAbout {
     color: black;
     float: right;
     font-size: 28px;
     font-weight: bold;
   }
   
-  .closeAdd:hover,.closeAdd:focus, .closeEdit:hover,.closeEdit:focus  {
+  .closeAdd:hover,.closeAdd:focus, .closeEdit:hover,.closeEdit:focus,.closeAbout:hover,.closeAbout:focus  {
     color: red;
     text-decoration: none;
     cursor: pointer;
