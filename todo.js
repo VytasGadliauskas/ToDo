@@ -145,16 +145,18 @@ function myAdd() {
     let myNaujaKortNum = myKorteliuSum+1;
     element.id = 'k'+myNaujaKortNum;
     myKortele.id = element.id;
-    let btnEdit = document.createElement("button");
-    btnEdit.innerHTML = "<img src='img/edit.png' alt='' width='20'>";
-    btnEdit.setAttribute('onclick', 'myEdit("'+element.id+'")')
-    let btnDel = document.createElement("button");
-    btnDel.setAttribute('onclick', 'myKorteleDelete("'+element.id+'")')
-    btnDel.innerHTML = "<img src='img/delete.png' alt='' width='20'>";
+    let imgEdit = document.createElement("img");
+    imgEdit.src = 'img/edit.png';
+    imgEdit.width= 20;
+    imgEdit.setAttribute('onclick', 'myEdit("'+element.id+'")')
+    let imgDel = document.createElement("img");
+    imgDel.src = 'img/delete.png';
+    imgDel.width = 20;
+    imgDel.setAttribute('onclick', 'myKorteleDelete("'+element.id+'")')
     let divmenu = document.createElement("div");
     divmenu.className = "kortele_menu";
-    divmenu.appendChild(btnEdit);
-    divmenu.appendChild(btnDel);
+    divmenu.appendChild(imgEdit);
+    divmenu.appendChild(imgDel);
     let divpavadininimas = document.createElement("div");
     divpavadininimas.className = "kortele_pavadinimas";
     let kortH3 = document.createElement("h3");
@@ -225,16 +227,18 @@ function myDBAdd(myKortele) {
     }
     
     element.id = myKortele.id;
-    let btnEdit = document.createElement("button");
-    btnEdit.innerHTML = "<img src='img/edit.png' alt='' width='20'>";
-    btnEdit.setAttribute('onclick', 'myEdit("'+element.id+'")')
-    let btnDel = document.createElement("button");
-    btnDel.setAttribute('onclick', 'myKorteleDelete("'+element.id+'")')
-    btnDel.innerHTML = "<img src='img/delete.png' alt='' width='20'>";
+    let imgEdit = document.createElement("img");
+    imgEdit.src = 'img/edit.png';
+    imgEdit.width = 20;
+    imgEdit.setAttribute('onclick', 'myEdit("'+element.id+'")')
+    let imgDel = document.createElement("img");
+    imgDel.setAttribute('onclick', 'myKorteleDelete("'+element.id+'")')
+    imgDel.src = 'img/delete.png';
+    imgDel.width = 20;
     let divmenu = document.createElement("div");
     divmenu.className = "kortele_menu";
-    divmenu.appendChild(btnEdit);
-    divmenu.appendChild(btnDel);
+    divmenu.appendChild(imgEdit);
+    divmenu.appendChild(imgDel);
     element.appendChild(divmenu); 
     let divpavadininimas = document.createElement("div");
     divpavadininimas.className = "kortele_pavadinimas";
@@ -280,7 +284,6 @@ function myAddToDB(myKortele) {
      console.log(data);
    })
    document.getElementById("myProgress").value = 100;
-   alert("Changes are faked and aren't persisted just like JSONPlaceholder, Requests are cached (1 minute)");
 }
 
 ///////////////////////////////////////////////// Redaguoja kortele JSON DB
@@ -305,7 +308,6 @@ function myEditToDB(myKortele) {
      console.log(data);
    })
   document.getElementById("myProgress").value = 100;
-  alert("Changes are faked and aren't persisted just like JSONPlaceholder, Requests are cached (1 minute)");
 } 
 
 ////////////////////////////////////////////////// DELETE kortele JSON DB
@@ -326,7 +328,6 @@ function myDeleteToDB(myKortelesID) {
      console.log(data);
    })
    document.getElementById("myProgress").value = 100;
-   alert("Changes are faked and aren't persisted just like JSONPlaceholder, Requests are cached (1 minute)");
 }
 
 ///////////////////////////////////////////////// Status BAR

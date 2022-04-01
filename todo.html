@@ -43,11 +43,12 @@
         <progress id="myProgress" value="0" max="100"></progress>
     </div>
     <div class="korteles" id="myKorteles">
+
       <!--  <div class="kortele_div" ondrop="drop(event)" ondragover="allowDrop(event)">
         <div class="kortele_g" id="k1" draggable="true"> 
           <div class="kortele_menu"> 
-            <button id="myBtnEdit-k1" onclick="myEdit('k1')"><img src="img/edit.png" alt="" width="20"></button> 
-            <button id="myBtnEdit" onclick="myKorteleDelete('k1')"><img src="img/delete.png" alt="" width="20"></button><br>
+            <img id="myBtnEdit-k1" onclick="myEdit('k1')" src="img/edit.png" alt="" width="20"> 
+            <img id="myBtnEdit" onclick="myKorteleDelete('k1')" src="img/delete.png" alt="" width="20"><br>
           </div>  
             <h3 id="myEditH3-k1">Demo</h3> 
             <p id="myEditP-k1">tralia tralia</p>
@@ -81,11 +82,22 @@
 
 <div class="footer">
   <div>
+      <select id="fonas" onchange="setFONAS()">
+      <option value="nustatytas">Pasirinkite fona</option>
+      <option value="nustatytas">Nustatytas</option>
+      <option value="fonas1.jpg"><img src="img/fonas1.jpg" alt="fonas1" width="20" height="15"></option>
+      <option value="fonas2.jpg"><img src="img/fonas2.jpg" alt="fonas2" width="20" height="15"></option>
+      <option value="fonas3.jpg"><img src="img/fonas3.jpg" alt="fonas3" width="20" height="15"></option>
+      <option value="fonas4.jpg"><img src="img/fonas4.jpg" alt="fonas4" width="20" height="15"></option>
+      </select>
+  </div>
+  <div>
       <select id="css" onchange="setCSS()">
       <option value="todo.css">Pasirinkite isvaizda</option>
       <option value="todo_kvadratai.css">Kvadratai</option>
       <option value="todo.css">Juostos</option>
-    </select></div>  
+      </select>
+  </div>  
   <div>Atlikta&numsp;</div>
   <div class="footer_progress"><div class="footer_progress_bar">0%</div></div> 
   <div class="footer_stats"><span style="color:yellow" id="status-g"> Geltonu 0 </span> <span style="color:red" id="status-r"> Raudonu 0 </span>
