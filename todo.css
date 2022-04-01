@@ -232,6 +232,7 @@ img:hover {
     width: 400px;
     font-size: larger;
     background-color: rgb(177, 177, 177);
+    background-image: url("img/fonas1.jpg");
   }
   
   .closeAdd .closeEdit .closeAbout {
