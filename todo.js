@@ -440,4 +440,8 @@ function setFonas(fonas) {
   apaciaFonas.style.backgroundImage = `url('${fonas}')`;
   let footerFonas = document.getElementById('footer');
   footerFonas.style.backgroundImage = `url('${fonas}')`;
+  let modalAddFonas = document.getElementById('modal-content-Add');
+  modalAddFonas.style.backgroundImage = `url('${fonas}')`;
+  let modalEditFonas = document.getElementById('modal-content-Edit');
+  modalEditFonas.style.backgroundImage = `url('${fonas}')`;
 }
