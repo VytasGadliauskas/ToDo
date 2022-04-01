@@ -40,8 +40,8 @@
 <body onload="myDBLoad()">
 
 <div id="virsus" class="virsus">
-    <div class="virsus1"> <img src="img/todo.jpeg" alt="Logo" width="100" height="100"> </div>
-    <div class="virsus2"> <h1>ToDo Demo</h1> </div>
+    <div id="myBtnAbout" onclick="showAbout()" class="virsus1"> <img src="img/todo.png" alt="Logo" width="100" height="100"> </div>
+    <div  class="virsus2"> <h1>Simple ToDo</h1> </div>
 </div>
 
 <div id="footer" class="footer">
@@ -152,6 +152,18 @@
       <button id="btnEditSave">Keisti</button>
     </div>
   </div>
+
+<!------------------------------------------ Modal langas About -->
+<div id="myModalAbout" class="modal">
+  <div id="modal-content-About" class="modal-content">
+    <span class="closeAbout">&times;</span>
+      <div>
+         <p>Autorius: Vytas Gadliauskas </p>
+         <p>mail: vytasgadliauskas@gmail.com </p>
+         <p>github: https://github.com/VytasGadliauskas</p>
+      </div>
+  </div>
+</div>
     
   <script src="todo.js"></script>
   <script>
@@ -166,6 +178,8 @@
               modalAddFonas.style.backgroundImage = `url('${fonoFAILAS}')`;
               let modalEditFonas = document.getElementById('modal-content-Edit');
               modalEditFonas.style.backgroundImage = `url('${fonoFAILAS}')`;
+              let modalAboutFonas = document.getElementById('modal-content-About');
+              modalAboutFonas.style.backgroundImage = `url('${fonoFAILAS}')`;
         }
   </script> 
 </body>

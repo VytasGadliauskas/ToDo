@@ -4,13 +4,25 @@
     let modalAdd = document.getElementById("myModalAdd");
     let btnAdd = document.getElementById("myBtnAdd");
     let spanAdd = document.getElementsByClassName("closeAdd")[0];
-
+ 
     btnAdd.onclick = function() {
       modalAdd.style.display = "block";
     }
 
     spanAdd.onclick = function() {
       modalAdd.style.display = "none";
+    }
+
+/////////////////////////////////////////////////   Modal About kodas 
+    let modalAbout = document.getElementById("myModalAbout");   
+    let spanAbout = document.getElementsByClassName("closeAbout")[0];
+
+    function showAbout() {
+      modalAbout.style.display = "block";
+    }
+
+    spanAbout.onclick = function() {
+      modalAbout.style.display = "none";
     }
 
 //////////////////////////////////////////////// modal Edit kodas
@@ -444,4 +456,6 @@ function setFonas(fonas) {
   modalAddFonas.style.backgroundImage = `url('${fonas}')`;
   let modalEditFonas = document.getElementById('modal-content-Edit');
   modalEditFonas.style.backgroundImage = `url('${fonas}')`;
+  let modalAboutFonas = document.getElementById('modal-content-About');
+  modalAboutFonas.style.backgroundImage = `url('${fonas}')`;
 }
