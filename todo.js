@@ -178,7 +178,8 @@ function myAdd() {
     element.addEventListener('dragleave', dragLeave);
     element.addEventListener('dragover', dragOver);
     element.addEventListener('drop', dragDrop);
-    document.getElementById('myKorteles').appendChild(element);
+    let kortelesADD = document.getElementById('myKorteles');
+    kortelesADD.insertBefore(element, kortelesADD.children[0]);
     // JSON 
     myAddToDB(myKortele);
     modalAdd.style.display = "none";
@@ -432,5 +433,11 @@ function setCSS(css_failas) {
 }
 
 function setFonas(fonas) {
-  
+  document.cookie = `todo_fono_file=${fonas}; expires=${new Date(new Date().getTime()+1000*60*60*24*365).toGMTString()}; path=/`; 
+  let virsusFonas = document.getElementById('virsus');
+  virsusFonas.style.backgroundImage = `url('${fonas}')`;
+  let apaciaFonas = document.getElementById('apacia');
+  apaciaFonas.style.backgroundImage = `url('${fonas}')`;
+  let footerFonas = document.getElementById('footer');
+  footerFonas.style.backgroundImage = `url('${fonas}')`;
 }
